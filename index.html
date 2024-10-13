@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+    <link rel="icon" href="C:\Users\tasha\OneDrive\Documents\Full-stack\instagram.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 935px;
+            width: 100%;
+        }
+
+        .login {
+            width: 350px;
+            padding: 40px;
+            background-color: #fff;
+            border: 1px solid #dbdbdb;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .login img {
+            margin-bottom: 20px;
+        }
+
+        .login input {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 14px;
+            background: #fafafa;
+            border: 1px solid #dbdbdb;
+            border-radius: 5px;
+            outline: none;
+            width: 100%;
+        }
+
+        .login button {
+            background-color: #3897f0;
+            color: white;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .social-login {
+            margin: 15px 0; 
+        }
+
+        .social-login a {
+            color: #3897f0; 
+            text-decoration: none; 
+            font-weight: bold;
+            display: block; 
+            margin-bottom: 10px; 
+        }
+
+        .forgot-password {
+            margin-top: 10px;
+            font-size: 12px;
+        }
+
+        .signup {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #dbdbdb;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .footer p {
+            font-size: 12px;
+            color: #8e8e8e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login">
+            <img src="C:\Users\tasha\OneDrive\Documents\Full-stack\t.avif" width="175" alt="Instagram Logo">
+            <div>
+                <input type="text" id="username" placeholder="Phone number, username, or email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button id="loginButton">Log In</button>
+            </div>
+            <div class="social-login">
+                <a href="#" id="fbLoginButton">
+                    <img src="C:\Users\tasha\OneDrive\Documents\Full-stack\facebook.png" alt="Facebook" style="width: 20px; height: 20px; margin-right: 8px; vertical-align: middle;">Log in with Facebook
+                </a>
+            </div>
+        </div>
+        <div class="signup">
+            <p>Don't have an account? <a href="#">Sign up</a></p>
+        </div>
+
+        <div class="footer">
+            <p>© 2024 Instagram from Meta</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginButton').addEventListener('click', function() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            console.log("Username: " + username);
+            console.log("Password: " + password);
+
+            document.getElementById('username').value = '';
+            document.getElementById('password').value = '';
+        });
+
+        document.getElementById('fbLoginButton').addEventListener('click', function() {
+            console.log("Facebook login clicked!");
+        });
+    </script>
+</body>
+</html>
